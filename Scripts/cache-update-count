@@ -1,0 +1,3 @@
+#!/bin/bash
+updates=$(checkupdates | wc -l)
+printf "$updates" > /tmp/updatecount

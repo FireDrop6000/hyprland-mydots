@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+~/.config/scrIpts/dynamic &
+while true
+do
+    # echo ""
+    out=$(cat /home/pratik/.config/hypr/store/dynamic_out.txt)
+    echo "$out"  | jq --unbuffered --compact-output
+    # cat ~/.config/hypr/scripts/tools/dynamic_out.txt
+done

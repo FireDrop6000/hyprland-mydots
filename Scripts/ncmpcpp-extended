@@ -1,0 +1,20 @@
+#!/bin/bash
+
+cols="$(tput cols)"
+lines="$(tput lines)"
+w_incr_self="$(( $cols / 4 ))" # ~25% of width
+h_incr_albumart="$(( $lines / 5 ))" # ~20% of height
+
+kitty @ set-window-title ncmpcpp
+
+kitty @ launch --title albumart bash -c "sleep 0.5 && mpd-mpris-albumart"
+kitty @ launch --match title:albumart --title cava cava
+
+kitty @ resize-window --axis reset
+kitty @ resize-window --self -i "$w_incr_self"
+kitty @ resize-window --match title:albumart --axis vertical -i "$h_incr_albumart"
+
+kitty @ focus-window --match title:ncmpcpp
+
+ncmpcpp
+

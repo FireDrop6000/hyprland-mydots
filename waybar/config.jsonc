@@ -1,0 +1,115 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 30,
+    
+    "modules-left": [ "custom/app-menu", "hyprland/window", "custom/files", "custom/browser", "custom/chats", "custom/terminal", "custom/clipboard", "custom/configuration" ],
+    "modules-center": [],
+    "modules-right": [ "custom/media", "battery", "tray", "custom/chatgpt", "custom/all-apps", "clock" ],
+    
+    "custom/app-menu": {
+      "format": " ",
+      "on-click": "~/.config/rofi/rofi-app-menu/app-menu",
+      "tooltip": false
+    },
+
+    "hyprland/window": {
+      "format": "{initialTitle}",
+      "rewrite": {
+        "": "Home",
+        "bash": "Terminal",
+        "Mozilla Firefox": "Firefox",
+        "chat.openai.com_/": "ChatGPT 3.5",
+        "web.whatsapp.com_/": "Whatsapp Web",
+        "neofetch": "About PC",
+        "Enter name of file to save to…": "Save File"
+      },
+      "tooltip": false
+    },
+
+    "custom/files": {
+      "format": "Files",
+      "on-click": "thunar",
+      "tooltip": false
+    },
+    
+    "custom/browser": {
+      "format": "Browser",
+      "on-click": "firefox",
+      "tooltip": false
+    },
+
+    "custom/chats": {
+      "format": "Chats",
+      "on-click": "thorium-browser --app=https://web.whatsapp.com --disable-gpu",
+      "tooltip": false
+    },
+
+    "custom/terminal": {
+      "format": "Terminal",
+      "on-click": "[float] kitty",
+      "tooltip": false
+    },
+
+    "custom/clipboard": {
+      "format": "Clipboard",
+      "on-click": "cliphist list | rofi -dmenu | cliphist decode | wl-copy",
+      "tooltip": false
+    },
+
+    "custom/configuration": {
+      "format": "Configuration",
+      "on-click": "kitty bash -i -c 'lf ~/.config'",
+      "tooltip": false
+    },
+
+    "custom/media": {
+      "format": "{}",
+      "escape": true,
+      "return-type": "json",
+      "max-length": 40,
+      "exec": "$HOME/.config/Scripts/mediaplayer.py 2> /dev/null",
+      "tooltip": false
+    },
+
+    "battery": {
+      "bat": "BAT1",
+      "interval": 60,
+      "states": {
+        "critical": 15
+      },
+      "format": "{icon}",
+      "format-icons": [" ", " ", " ", " ", " "],
+      "format-charging": "  {capacity}%",
+      "format-critical": " {capacity}%",
+      "tooltip": false
+    },
+
+    "tray": {
+      "icon-size": 23,
+      "spacing": 9,
+      "tooltip": false
+    },
+    
+    "custom/chatgpt": {
+      "format": " ",
+      "on-click": "thorium-browser --app=https://chat.openai.com --disable-gpu",
+      "tooltip": false
+    },
+
+    "custom/all-apps": {
+      "format": " ",
+      "on-click": "rofi -show drun",
+      "tooltip": false
+    },
+
+    "clock": {
+      "interval": 60,
+      "format": "{:%a %b %d %I:%M %p}",
+      "tooltip": false
+    }
+}

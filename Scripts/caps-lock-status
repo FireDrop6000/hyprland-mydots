@@ -1,0 +1,16 @@
+#!/bin/bash
+
+sleep 0.2
+
+brightness="$(cat /sys/class/leds/input3::capslock/brightness)"
+
+status="false"
+if [[ "$brightness" == "1" ]]; then
+  status="true"
+fi
+
+jq --unbuffered \
+  --compact-output \
+  --null-input \
+  --arg status "$status" \
+  '{text: "caps-lock-status", alt: $status}'

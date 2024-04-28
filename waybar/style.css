@@ -1,0 +1,84 @@
+* {
+    font-family: SF Pro Display;
+    font-weight: 500;
+    font-size: 11;
+}
+
+window#waybar {
+  background-color: rgba(27, 27, 27, 0.25);
+}
+
+#custom-app-menu,
+#window,
+#custom-files,
+#custom-browser,
+#custom-chats,
+#custom-terminal,
+#custom-clipboard,
+#custom-configuration,
+#custom-media,
+#battery,
+#tray,
+#custom-chatgpt,
+#custom-all-apps,
+#clock {
+  color: #f2f3f4;
+  padding: 2px 0px 2px 0px;
+}
+
+#custom-app-menu {
+  font-size: 15;
+  margin-left: 14px;
+}
+
+#window {
+  margin-left: 15px;
+}
+
+#custom-files {
+  margin-left: 18px;
+}
+
+#custom-browser {
+  margin-left: 18px;
+}
+
+#custom-chats {
+  margin-left: 18px;
+}
+
+#custom-terminal {
+  margin-left: 18px;
+}
+
+#custom-clipboard {
+  margin-left: 18px;
+}
+
+#custom-configuration {
+  margin-left: 18px;
+}
+
+#custom-media {
+  margin-right: 27px;
+}
+
+#battery {
+  font-size: 17;
+  margin-right: 15px;
+}
+
+#custom-chatgpt {
+  font-size: 13;
+  margin-left: 13px;
+}
+
+#custom-all-apps {
+  font-size: 13;
+  margin-left: 15px;
+}
+
+#clock {
+  margin-left: 15px;
+  margin-right: 14px;
+}

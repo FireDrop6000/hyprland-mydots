@@ -1,0 +1,232 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 35,
+
+    "modules-left": ["custom/arch-menu", "hyprland/workspaces", "clock", "custom/weather", "custom/spotify", "custom/prevButton", "custom/nextButton", "custom/ytm", "custom/ytPrev", "custom/ytNext"],
+    "modules-center": ["mpd"],
+    "modules-right": ["custom/power_profile", "battery", "backlight", "pulseaudio", "pulseaudio#microphone", "network", "bluetooth", "custom/updates", "custom/caps_lock", "custom/power_btn"],
+
+    "include": [
+        "~/.config/HyprV/waybar/conf/mesu.jsonc",
+        "~/.config/HyprV/waybar/conf/asus-rog.jsonc",
+        "~/.config/HyprV/waybar/conf/hyprv-util.jsonc"
+    ],
+    
+    "custom/arch-menu":{
+      "format": "<span font='25'>󰣇</span>",
+      "on-click": "rofi -show drun",
+      "on-click-right": "~/.config/rofi/rofi-power-menu/powermenu.sh"
+    },
+
+    "custom/caps_lock":{
+      "exec": "~/.config/scrIpts/caps-lock-status",
+      "return-type": "json",
+      "format": "{icon}",
+      "format-icons": {
+        "true": "󰪛",
+        "false": ""
+      },
+      "interval": "once",
+      "signal": 1
+    },
+
+    "custom/power_btn": {
+        "format": "",
+        "on-click": "sh -c '(sleep 0.5s; ~/.config/rofi/scripts/powermenu_t2)' & disown",
+        "tooltip": false
+    },
+    
+    "custom/spotify": {
+      "exec": "/usr/bin/python3 ~/.config/waybar/mediaplayer.py --player spotify",
+      "format": "<span font='12' rise='-1000'></span>  {}",
+      "return-type": "json",
+      "fixed-center": "true",
+      "smooth-scrolling-threshold": 15,
+      "on-click": "playerctl -p spotify play-pause",
+      "max-length": 30 
+  },
+    
+    "custom/prevButton": {
+      "exec": "/usr/bin/python3 ~/.config/waybar/mediaplayer.py --player spotify",
+      "format": "<span font='13' rise='-1000'>󰙣</span>",
+      "tooltip": false,
+      "on-click": "playerctl -p spotify previous"
+    },
+
+    "custom/nextButton": {
+      "exec": "/usr/bin/python3 ~/.config/waybar/mediaplayer.py --player spotify",
+      "format": "<span font='13' rise='-1000'>󰙡</span>",
+      "tooltip": false,
+      "on-click": "playerctl -p spotify next"
+    },
+
+    "custom/ytm": {
+      "exec": "/usr/bin/python3 ~/.config/waybar/mediaplayer.py --player chromium",
+      "format": "<span font='12' rise='-1000'></span>  {}",
+      "return-type": "json",
+      "max-length": 30,
+      "fixed-center": "true",
+      "on-click": "playerctl -p chromium play-pause"                 
+    },
+
+    "custom/ytPrev": {
+      "exec": "/usr/bin/python3 ~/.config/waybar/mediaplayer.py --player chromium",
+      "format": "<span font='13' rise='-1000'>󰙣</span>",
+      "tooltip": false,
+      "on-click": "playerctl -p chromium previous"
+    },
+    
+    "custom/ytNext": {
+      "exec": "/usr/bin/python3 ~/.config/waybar/mediaplayer.py --player chromium",
+      "format": "<span font='13' rise='-1000'>󰙡</span>",
+      "tooltip": false,
+      "on-click": "playerctl -p chromium next"
+    },
+    
+    "custom/updates": {
+        "format": "{}",
+        "exec": "~/.config/HyprV/waybar/scripts/update-sys",
+        "on-click": "~/.config/HyprV/waybar/scripts/update-sys update",
+        "interval": 300,
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+      "on-click": "activate",
+      "active-only": false,
+      "all-outputs": true,
+      "format": "{icon}",
+      "format-icons": {
+			    "urgent": "<span font='20'></span>",
+			    "active": "<span font='20'></span>",
+			    "default": "<span font='20'></span>"
+      },
+      "persistent-workspaces": {
+          "*": 0
+      }
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "smooth-scrolling-threshold": 8,
+        "on-scroll-up": "~/.config/HyprV/waybar/scripts/brightness --dec",
+        "on-scroll-down": "~/.config/HyprV/waybar/scripts/brightness --inc",
+        "tooltip": true,
+        "tooltip-format": "{percent}%"
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 40,
+            "critical": 20
+        },
+        "format": "{icon}",
+        "format-charging": "󰂄",
+        "format-plugged": "",
+        "format-alt": "{capacity}% ({time})",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip": true,
+        "tooltip-format": "{capacity}% ({time} left)",
+        "tooltip-format-charging": "{capacity}% (charging)",
+        "tooltip-format-full": "Full"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "",
+        "on-click": "~/.config/HyprV/waybar/scripts/volume --toggle",
+        "on-click-right": "pavucontrol",
+        "smooth-scrolling-threshold": 7,
+        "on-scroll-down": "~/.config/HyprV/waybar/scripts/volume --inc",
+        "on-scroll-up": "~/.config/HyprV/waybar/scripts/volume --dec",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "max-length": 15,
+        "tooltip": true,
+        "tooltip-format": "{volume}%"
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        "on-click": "~/.config/HyprV/waybar/scripts/volume --toggle-mic",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "~/.config/HyprV/waybar/scripts/volume --mic-inc",
+        "on-scroll-down": "~/.config/HyprV/waybar/scripts/volume --mic-dec",
+        "scroll-step": 5,
+        "tooltip": false
+    },
+    
+    "network": {
+        "format-ethernet": "",
+        "format-wifi": "󰤨",
+        "format-disconnected": "<span color='#ed8796'>󰤨</span>",
+        "format-disabled": "<span color='#ed8796'>󰤮</span>",
+        "tooltip-format": " {ifname} via {gwaddri}",
+        "tooltip-format-wifi": "󰤨  {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
+        "tooltip-format-disconnected": "Disconnected",
+        "tooltip-format-disabled": "Disabled",
+        "max-length": 50,
+        "on-click": "~/.config/rofi/rofi-wifi-menu/rofi-wifi-menu.sh"
+    },
+    
+    "bluetooth": {
+        "format-on": "",
+        "format-connected": "󰂱",
+        "format-disabled": "󰂲",
+        "format-off": "󰂲",
+        "tooltip-format-on": "Turned on",
+        "tooltip-format-connected": "󰂱 {device_alias} (Battery N/A)",
+        "tooltip-format-connected-battery": "󰂱 {device_alias} ({device_battery_percentage}%)",
+        "tooltip-format-disabled": "Disabled",
+        "tooltip-format-off": "Turned off",
+        "interval": 30,
+        "on-click": "blueman-manager"
+    },
+
+    "mpd": {
+      "format": "{stateIcon} {title}",
+      "format-disconnected": "Disconnected",
+      "format-stopped": " Stopped",
+      "interval": 10,
+      "consume-icons": {
+          "on": " " // Icon shows only when "consume" is on
+      },
+      "random-icons": {
+          "off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
+          "on": " "
+      },
+      "repeat-icons": {
+          "on": " "
+      },
+      "single-icons": {
+          "on": "1 "
+      },
+      "state-icons": {
+          "paused": "",
+          "playing": ""
+      },
+      "tooltip-format": "MPD (connected)",
+      "tooltip-format-disconnected": "MPD (disconnected)"
+    }
+}
+
+

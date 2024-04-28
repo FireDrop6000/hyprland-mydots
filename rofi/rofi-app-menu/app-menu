@@ -1,0 +1,51 @@
+#!/bin/sh
+
+function entry() {
+  n_left=$(wc -c <<< "$1")
+  if [[ -z $2 ]]; then
+    printf "%s" "$1"
+    return
+  fi
+  pad=$(( $3 - $n_left ))
+  printf "%s%${pad}s" "$1" "$2"
+}
+
+updates=0
+
+if [[ -f /tmp/updatecount ]]; then 
+  updates="$(cat /tmp/updatecount)"
+fi
+
+choice1=" About this PC"
+if [[ "$updates" == "0" ]]; then
+  choice2="$(entry " System/App Updates...")"
+else
+  numlen="$(wc -c <<< "$updates")"
+  case "$numlen" in
+    2) width=62 ;;
+    3) width=60 ;;
+    4) width=60 ;;
+  esac
+  choice2="$(entry " System/App Updates..." "$updates Updates" $width)"
+fi
+
+choice3="$(entry " Sleep" "")"
+choice4="$(entry " Restart...")"
+choice5="$(entry " Shut Down...")"
+choice6="$(entry " Lock Screen" "  + L" 75)"
+choice7="$(entry " Log Out $USER ..." "  + X" 74)"
+
+
+
+USER=$(whoami)
+chosen=$(printf "$choice1\n$choice2\n$choice3\n$choice4\n$choice5\n$choice6\n$choice7\n" | rofi -dmenu -i -no-show-icons -l 7 -width 30 -p " Welcome to Apple Menu!")
+
+case "$chosen" in
+  "$choice1") kitty --title neofetch bash -i -c 'neofetch && sleep infinity' ;;
+  "$choice2") kitty bash -i -c 'yay -Syu' ;;
+  "$choice3") systemctl suspend-then-hibernate ;;
+  "$choice4") reboot ;;
+  "$choice5") poweroff ;;
+  "$choice6") hyprlock -l ;;
+  "$choice7") killhypr ;;
+esac

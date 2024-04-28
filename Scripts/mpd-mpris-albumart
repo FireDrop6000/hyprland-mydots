@@ -1,0 +1,62 @@
+#!/bin/env python
+
+import dbus
+from dbus.mainloop.glib import DBusGMainLoop
+from gi.repository import GLib
+import subprocess
+from sys import exit
+import signal
+from os import get_terminal_size
+
+size = get_terminal_size()
+
+def clear():
+    subprocess.run(["kitty", "+kitten", "icat", "--clear"])
+
+def draw(art_url):
+    subprocess.run([
+        "kitty", "+kitten", "icat",
+        "--place", f"{size.columns}x{size.lines}@0x0",
+        "--scale-up", art_url
+    ])
+
+def on_msg(bus, msg):
+    args = msg.get_args_list()
+    try:
+        if len(args) < 3: return
+        if type(args[1]) != dbus.Dictionary: return
+
+        if 'Metadata' not in args[1]: return
+        metadata = args[1]['Metadata']
+
+        clear()
+
+        if 'mpris:artUrl' not in metadata: return
+        draw(metadata['mpris:artUrl'])
+        
+    except Exception as err:
+        print("something went wrong!")
+        print(err)
+
+if __name__ == "__main__":
+
+    signal.signal(signal.SIGINT, lambda sig, frame: exit(0))
+
+    DBusGMainLoop(set_as_default=True)
+    bus = dbus.SessionBus()
+
+    proxy = bus.get_object("org.mpris.MediaPlayer2.mpd", "/org/mpris/MediaPlayer2")
+    props_iface = dbus.Interface(proxy, "org.freedesktop.DBus.Properties")
+    metadata = props_iface.Get("org.mpris.MediaPlayer2.Player", "Metadata")
+
+    if 'mpris:artUrl' in metadata: 
+        draw(metadata['mpris:artUrl'])
+
+    match_str = "sender=org.mpris.MediaPlayer2.mpd,path=/org/mpris/MediaPlayer2,member=PropertiesChanged"
+    bus.add_match_string(match_str)
+    bus.add_message_filter(on_msg)
+
+
+    mainloop = GLib.MainLoop()
+    mainloop.run()
+

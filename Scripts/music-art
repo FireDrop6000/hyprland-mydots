@@ -1,0 +1,7 @@
+#!/bin/sh
+MUSIC_DIR="$HOME/Music"
+COVER="/tmp/mpd_mpris/artwork_*.jpeg"
+
+ffmpeg -i "${MUSIC_DIR}/$(mpc current -f %file%)" "${COVER}" -y &> /dev/null
+sleep 2s
+notify-send -i /tmp/mpd_mpris/artwork_*.jpeg "$(mpc --format '%title% \n%artist% - %album%' current)"
