@@ -68,6 +68,14 @@ window#waybar {
   margin-right: 15px;
 }
 
+#battery.charging {
+  font-size: 11;
+}
+
+#battery.critical {
+  font-size: 11;
+}
+
 #custom-chatgpt {
   font-size: 13;
   margin-left: 13px;
