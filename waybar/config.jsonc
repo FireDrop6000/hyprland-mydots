@@ -45,7 +45,7 @@
 
     "custom/chats": {
       "format": "Chats",
-      "on-click": "thorium-browser --app=https://web.whatsapp.com --disable-gpu",
+      "on-click": "beeper --disable-gpu",
       "tooltip": false
     },
 
