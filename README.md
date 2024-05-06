@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![hyde_banner](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/hyde_banner.png)
+![top_banner](https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/assets/banner.png)
 
 <br>
 
