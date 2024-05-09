@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sleep 0.2
+
+status="$(dunstctl is-paused)"
+
+jq --unbuffered \
+  --compact-output \
+  --null-input \
+  --arg status "$status" \
+  '{text: "dnd-status", alt: $status}'
