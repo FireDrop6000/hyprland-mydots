@@ -9,7 +9,7 @@
     
     "modules-left": [ "custom/app-menu", "hyprland/window", "custom/files", "custom/browser", "custom/chats", "custom/terminal", "custom/clipboard", "custom/configuration" ],
     "modules-center": [],
-    "modules-right": [ "custom/media", "battery", "tray", "custom/chatgpt", "custom/all-apps", "clock" ],
+    "modules-right": [ "custom/media", "battery", "tray", "custom/chatgpt", "custom/all-apps", "custom/do-not-disturb", "clock" ],
     
     "custom/app-menu": {
       "format": " ",
@@ -26,7 +26,8 @@
         "chat.openai.com_/": "ChatGPT 3.5",
         "web.whatsapp.com_/": "Whatsapp Web",
         "neofetch": "About PC",
-        "Enter name of file to save to…": "Save File"
+        "Enter name of file to save to…": "Save File",
+        "Beeper (.*)": "Beeper"
       },
       "tooltip": false
     },
@@ -105,6 +106,18 @@
       "format": " ",
       "on-click": "rofi -show drun",
       "tooltip": false
+    },
+
+    "custom/do-not-disturb": {
+      "exec": "~/.config/Scripts/dnd-status",
+      "return-type": "json",
+      "format": "{icon}",
+      "format-icons": {
+        "true": "  Do Not Distub On",
+        "false": ""
+      },
+      "interval": "once",
+      "signal": 1
     },
 
     "clock": {
