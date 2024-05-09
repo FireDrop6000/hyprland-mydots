@@ -27,7 +27,8 @@
         "web.whatsapp.com_/": "Whatsapp Web",
         "neofetch": "About PC",
         "Enter name of file to save to…": "Save File",
-        "Beeper (.*)": "Beeper"
+        "Beeper (.*)": "Beeper",
+        "(.*) Thorium": "Thorium"
       },
       "tooltip": false
     },
