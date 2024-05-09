@@ -1,0 +1,18 @@
+#!/bin/bash
+
+iDIR="$HOME/.config/dunst/icons/dnd"
+
+dnd="false"
+
+dnd=$(dunstctl is-paused)
+
+if [[ "$dnd" == "false" ]]; then
+  notify-send "Do Not Disturb is On" "You will not recieve any notifications." -i ~/.config/dunst/icons/dnd/dnd-on.png -r 9991
+  sleep 5
+  dunstctl set-paused true
+else
+  dunstctl set-paused false
+  notify-send "Do Not Disturb is Off" "You will recieve regular notifications." -i ~/.config/dunst/icons/dnd/dnd-off.png -r 9991
+fi
+
+pkill -RTMIN+1 waybar & disown
