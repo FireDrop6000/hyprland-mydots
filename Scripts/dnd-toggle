@@ -8,7 +8,7 @@ dnd=$(dunstctl is-paused)
 
 if [[ "$dnd" == "false" ]]; then
   notify-send "Do Not Disturb is On" "You will not recieve any notifications." -i ~/.config/dunst/icons/dnd/dnd-on.png -r 9991
-  sleep 5
+  sleep 2
   dunstctl set-paused true
 else
   dunstctl set-paused false
