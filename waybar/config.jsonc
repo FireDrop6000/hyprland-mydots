@@ -9,7 +9,7 @@
     
     "modules-left": [ "custom/app-menu", "hyprland/window", "custom/files", "custom/browser", "custom/chats", "custom/terminal", "custom/clipboard", "custom/configuration" ],
     "modules-center": [],
-    "modules-right": [ "custom/media", "battery", "tray", "custom/chatgpt", "custom/all-apps", "custom/do-not-disturb", "clock" ],
+    "modules-right": [ "custom/media", "battery", "tray", "custom/chatgpt", "custom/all-apps", "custom/recording", "custom/do-not-disturb", "clock" ],
     
     "custom/app-menu": {
       "format": " ",
@@ -109,12 +109,24 @@
       "tooltip": false
     },
 
+    "custom/recording": {
+      "exec": "~/.config/Scripts/recording-status.sh",
+      "return-type": "json",
+      "format": "{icon}",
+      "format-icons": {
+        "true": "󰻃    Screen Recording",
+        "false": ""
+      },
+      "interval": "once",
+      "signal": 2
+    },
+
     "custom/do-not-disturb": {
       "exec": "~/.config/Scripts/dnd-status",
       "return-type": "json",
       "format": "{icon}",
       "format-icons": {
-        "true": "  Do Not Distub On",
+        "true": "    Do Not Distub On",
         "false": ""
       },
       "interval": "once",

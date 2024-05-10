@@ -21,6 +21,7 @@ window#waybar {
 #tray,
 #custom-chatgpt,
 #custom-all-apps,
+#custom-recording,
 #custom-do-not-disturb,
 #clock {
   color: #f2f3f4;
@@ -86,6 +87,11 @@ window#waybar {
 
 #custom-all-apps {
   font-size: 13;
+  margin-left: 15px;
+}
+
+#custom-recording {
+  font-size: 12;
   margin-left: 15px;
 }
 
