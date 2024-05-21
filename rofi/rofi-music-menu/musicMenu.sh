@@ -10,7 +10,7 @@ choice=$(echo -e "$options" | rofi -dmenu -i -no-show-icons -l 4 -width 30 -p "C
 
 case $choice in
   $option1)
-    kitty bash -i -c 'ncmpcpp-extended'
+    kitty --title ncmpcpp bash -i -c 'ncmpcpp-extended'
   ;;
   $option2)
     LD_PRELOAD=/usr/lib/spotify-adblock.so spotify & disown
