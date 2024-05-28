@@ -21,7 +21,7 @@
       "format": "{initialTitle}",
       "rewrite": {
         "": "Home",
-        "bash": "Terminal",
+        "kitty": "Terminal",
         "Mozilla Firefox": "Firefox",
         "chat.openai.com_/": "ChatGPT 3.5",
         "web.whatsapp.com_/": "Whatsapp Web",
