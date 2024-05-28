@@ -35,6 +35,7 @@ window#waybar {
 }
 
 #window {
+  padding: 1px 0px 3px 0px;
   margin-left: 15px;
 }
 
@@ -69,7 +70,7 @@ window#waybar {
 
 #battery {
   font-size: 17;
-  margin-right: 15px;
+  margin-right: 17px;
 }
 
 #battery.charging {
@@ -87,7 +88,7 @@ window#waybar {
 
 #custom-all-apps {
   font-size: 13;
-  margin-left: 15px;
+  margin-left: 17px;
 }
 
 #custom-recording {
