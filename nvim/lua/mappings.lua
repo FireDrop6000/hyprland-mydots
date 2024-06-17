@@ -12,4 +12,7 @@ map('n', '<leader>fm', function()
     async = true,
   }
 end)
+
+map('t', '<C-w>w', '<cmd> wincmd k <CR>')
+--map('t', '<C-w>w', '<C-\\><C-n><C-w>w')
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")

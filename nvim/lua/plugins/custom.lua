@@ -24,22 +24,61 @@ local plugins = {
     enabled = false,
   },
 
-  -- If your opts uses a function call, then make opts spec a function*
-  -- should return the modified default config as well
-  -- here we just call the default telescope config
-  -- and then assign a function to some of its options
+  -- lazy.nvim
   {
-    "nvim-telescope/telescope.nvim",
-    opts = function()
-      local conf = require "plugins.configs.telescope"
-      conf.defaults.mappings.i = {
-        ["<C-j>"] = require("telescope.actions").move_selection_next,
-        ["<Esc>"] = require("telescope.actions").close,
-      }
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+    },
+  },
 
-      return conf
-    end,
+  {
+    "nvim-java/nvim-java",
+    dependencies = {
+      "nvim-java/lua-async-await",
+      "nvim-java/nvim-java-refactor",
+      "nvim-java/nvim-java-core",
+      "nvim-java/nvim-java-test",
+      "nvim-java/nvim-java-dap",
+      "MunifTanjim/nui.nvim",
+      "neovim/nvim-lspconfig",
+      "mfussenegger/nvim-dap",
+      {
+        "williamboman/mason.nvim",
+        opts = {
+          registries = {
+            "github:nvim-java/mason-registry",
+            "github:mason-org/mason-registry",
+          },
+        },
+      },
+    },
   },
 }
+-- If your opts uses a function call, then make opts spec a function*
+-- should return the modified default config as well
+-- here we just call the default telescope config
+-- and then assign a function to some of its options
+-- {
+--   "nvim-telescope/telescope.nvim",
+--   opts = function()
+--     -- local conf = require "plugins.configs.telescope"
+--     conf.defaults.mappings.i = {
+--       ["<C-j>"] = require("telescope.actions").move_selection_next,
+--       ["<Esc>"] = require("telescope.actions").close,
+--     }
+--
+--     return conf
+--   end,
+-- },
 
 return plugins
