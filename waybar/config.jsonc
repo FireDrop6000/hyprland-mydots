@@ -28,7 +28,8 @@
         "neofetch": "About PC",
         "Enter name of file to save to…": "Save File",
         "Beeper (.*)": "Beeper",
-        "(.*) Thorium": "Thorium"
+        "(.*) Thorium": "Thorium",
+        "Spotify Free": "Spotify"
       },
       "tooltip": false
     },
