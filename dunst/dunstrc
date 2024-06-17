@@ -446,7 +446,7 @@
     foreground = "#24273a"
     frame_color = "#ed8796"
     icon = "~/.config/dunst/icons/critical.svg"
-    timeout = 5
+    timeout = 15
     # Icon for notifications with critical urgency, uncomment to enable
     #default_icon = /path/to/icon
 
