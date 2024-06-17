@@ -24,7 +24,7 @@ if [ "$BATTERY_LEVEL" -gt 95 ] && [ "$BATTERY_DISCHARGING" -eq 0 ] && [ ! -f $FU
   notify-send "Battery Charged" "Battery is fully charged." -i ~/.config/dunst/icons/battery-full.png -r 9991
   touch $FULL_FILE
 # If the battery is low and is not charging
-elif [ "$BATTERY_LEVEL" -le $WARNING_LEVEL ] && [ "BATTERY_DISCHARGING" -eq 1 ] && [ ! -f $EMPTY_FILE ]; then
+elif [ "$BATTERY_LEVEL" -le "$WARNING_LEVEL" ] && [ "$BATTERY_DISCHARGING" -eq 1 ] && [ ! -f $EMPTY_FILE ]; then
   notify-send "Low Battery" "${BATTERY_LEVEL}% of battery remaining." -u critical -i ~/.config/dunst/icons/battery-alert.png -r 9991
   touch $EMPTY_FILE
 fi 
