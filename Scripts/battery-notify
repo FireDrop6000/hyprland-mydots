@@ -4,7 +4,7 @@ export DISPLAY=:1
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
 
 # Battery percentage at which to notify
-WARNING_LEVEL=15
+WARNING_LEVEL=21
 BATTERY_DISCHARGING=$(acpi -b | grep -c "Discharging")
 BATTERY_LEVEL=$(acpi -b | grep -P -o '[0-9]+(?=%)')
 
