@@ -1,8 +1,8 @@
 <div align="center">
 
-![top_banner](https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/assets/banner.png)
+![top_banner](https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/banner.png)
 
-<br><div align="center"><img width="65%" src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/assets/made-with-arch-text.png"/><br></div>
+<br><div align="center"><img width="65%" src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/made-with-arch-text.png"/><br></div>
 
 ## Installation
 
