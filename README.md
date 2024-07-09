@@ -1,4 +1,4 @@
-<div align="center">
+<div align="left">
 
 ![top_banner](https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/banner.png)
 
@@ -30,119 +30,94 @@ cd ~/mydots
 git pull
 cp . ~
 ```
+## Packages
 
-<!--README Under Construction-->
+<div align="center"><table><tr><a href="https://github.com/hyprwm/hyprlock">Hyprlock</a></tr>
+<tr><td><img src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/hyprlock-1.png"/></td>
+<td><img src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/hyprlock-2.png"/></td></tr>
+</table></div>
 
-## Styles
+<div align="center"><table><tr><td><a href="https://wiki.hyprland.org">Hyprland</a></td><td><a href="https://sw.kovidgoyal.net/kitty">Kitty</a></td></tr><tr><td>
+<img src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/hyprland.png"/></td><td>
+<img src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/kitty.png"/></td></tr>
+<tr><td><a href="https://rybczak.net/ncmpcpp">NCMPCPP</a></td><td><a href="https://github.com/dylanaraps/neofetch">Neofetch</a></td></tr><tr><td>
+<img src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/ncmpcpp.png"/></td><td>
+<img src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/neofetch.png"/></td></tr>
+</table></div>
+
+<div align="center"><table><tr><a href="https://github.com/lbonn/rofi">Rofi Launcher</a></tr><tr><td>
+<img src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/rofi-1.png"/></td><td>
+<img src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/rofi-2.png"/></td><td>
+<img src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/rofi-3.png"/></td></tr>
+</table></div>
+
+<div align="center"><table><tr><td><a href="https://nvchad.com/docs/quickstart/install">NvChad</a></td><td><a href="https://github.com/spicetify/spicetify-themes/blob/master/THEMES.md#lunar">Spicetify Lunar</a></td></tr><tr><td>
+<img src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/neovim.png"/></td><td>
+<img src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/spotify.png"/></td></tr>
+</table></div>
+
+<div align="center"><table><tr><td><a href="https://github.com/Alexays/Waybar">Waybar</a></td></tr><tr><td>
+<img src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/waybar.png"/></td></tr>
+</table></div>
+
+#### Further
+
+<div><ul> 
+<li><a href="https://github.com/dunst-project/dunst">Dunst</a></li>
+<li><a href="https://github.com/MusicPlayerDaemon/MPD">MPD</a></li>
+<li><a href="https://github.com/natsukagami/mpd-mpris">Mpd-Mpris</a></li>
+<li><a href="https://github.com/altdesktop/playerctl">Playerctl</a></li>
+<li><a href="https://github.com/ammen99/wf-recorder">Wf-Recorder</a></li>
+<li><a href="https://github.com/emersion/grim">Grim</a></li>
+<li><a href="https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper">Hyprpaper</a></li>
+<li><a href="https://github.com/karlstav/cava">Cava</a></li>
+<li><a href="https://github.com/abba23/spotify-adblock">Spotify Adblock</a></li>
+<li><a href="https://th-ch.github.io/youtube-music">Youtube Music</a></li>
+<li><a href="https://starship.rs">Starship</a></li>
+<li>Additional user-specific applications like File Manager and Chat App</li>
+
+## Keybindings
 
 <div align="center">
-        <table>
-            <tr><a href="https://github.com/hyprwm/hyprlock">Hyprlock</a></tr>
-            <tr><td><img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_select_1.png"/></td>
-                <td><img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_select_2.png"/></td></tr>
-        </table>
-    </div>
 
-<div align="center"><table><tr><td>Wallpaper Select</td><td>Launcher Select</td></tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/walls_select.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_sel.png"/></td></tr>
-<tr><td>Wallbash Modes</td><td>Notification Action</td></tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/wb_mode_sel.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/notif_action_sel.png"/></td></tr>
-</table></div>
+| Keys | Action |
+| :--- | :--- |
+| <kbd>Super</kbd> + <kbd>T</kbd> | Open Terminal |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd> | Open Floating Terminal |
+| <kbd>Super</kbd> + <kbd>A</kbd> | Close Process |
+| <kbd>Super</kbd> + <kbd>L</kbd> | Lock PC |
+| <kbd>Super</kbd> + <kbd>Q</kbd> | Open Power Menu |
+| <kbd>Super</kbd> + <kbd>X</kbd> | Kill Process |
+| <kbd>Super</kbd> + <kbd>E</kbd> | Open File Manager |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> | Open Floating File Manager |
+| <kbd>Super</kbd> + <kbd>V</kbd> | Toggle Floating Mode for Windows |
+| <kbd>Super</kbd> + <kbd>Space</kbd> | Open App Menu |
+| <kbd>Super</kbd> + <kbd>P</kbd> | Toggle Pseudo Mode for Windows |
+| <kbd>Super</kbd> + <kbd>J</kbd> | Toggle window splits |
+| <kbd>Super</kbd> + <kbd>S</kbd> | Open Screenshot Menu |
+| <kbd>Alt</kbd> + <kbd>V</kbd> | Open Clipboard |
+| <kbd>Super</kbd> + <kbd>W</kbd> | Update Wallpaper |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> | Update Waybar |
+| <kbd>Super</kbd> + <kbd>F</kbd> | Toggle Fullscreen Mode for Windows |
+| <kbd>Super</kbd> + <kbd>B</kbd> | Open Browser |
+| <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>T</kbd> | Open Secondary Browser |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> | Kill Hyprland |
+| <kbd>Super</kbd> + <kbd>C</kbd> | Open Secondary Code Editor |
+| <kbd>Super</kbd> + <kbd>M</kbd> | Open Music Menu |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> | Change Display |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd> | Open ChatGPT |
+| <kbd>Alt</kbd> + <kbd>W</kbd> | Open Wifi Menu |
+| <kbd>Super</kbd> + <kbd>R</kbd> | Toggle Screen Recorder |
+| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>C</kbd> | Open Calculator |
+| <kbd>Alt</kbd> + <kbd>B</kbd> | Open Bluetooth Menu |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> | Open Chat App |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd> | Toggle DND Mode |
+| <kbd>Super</kbd> + <kbd>.</kbd> | Player Shift |
+| <kbd>Super</kbd> + <kbd>,</kbd> | Player Unshift |
+| <kbd>Super</kbd> + <kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd> | Move Window Focus |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd> | Move Window |
+| <kbd>Super</kbd> + <kbd>[0-9]</kbd> | Switch Workspaces |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>[0-9]</kbd> | Move Focused Window to Other Workspace |
 
-<div align="center"><table><tr>Rofi Launcher</tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_1.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_2.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_3.png"/></td></tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_4.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_5.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_6.png"/></td></tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_7.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_8.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_9.png"/></td></tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_10.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_11.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_12.png"/></td></tr>
-</table></div>
-
-<div align="center"><table><tr>Wlogout Menu</tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/wlog_style_1.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/wlog_style_2.png"/></td></tr></table></div>
-
-<div align="center"><table><tr>Game Launcher</tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_1.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_2.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_3.png"/></td></tr></table></div>
-<div align="center"><table><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_4.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_5.png"/></td></tr></table></div>
-
-<div align="right">
-  <br>
-  <a href="#-design-by-t2"><kbd> <br> 🡅 <br> </kbd></a>
 </div>
 
-<!--## Keybindings-->
-<!---->
-<!--<div align="center">-->
-<!---->
-<!--| Keys | Action |-->
-<!--| :--- | :--- |-->
-<!--| <kbd>Super</kbd> + <kbd>Q</kbd><br><kbd>Alt</kbd> + <kbd>F4</kbd> | Close focused window|-->
-<!--| <kbd>Super</kbd> + <kbd>Del</kbd> | Kill Hyprland session |-->
-<!--| <kbd>Super</kbd> + <kbd>W</kbd> | Toggle the window between focus and float |-->
-<!--| <kbd>Super</kbd> + <kbd>G</kbd> | Toggle the window between focus and group |-->
-<!--| <kbd>Alt</kbd> + <kbd>Enter</kbd> | Toggle the window between focus and fullscreen |-->
-<!--| <kbd>Super</kbd> + <kbd>L</kbd> | Launch lock screen |-->
-<!--| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> | Toggle pin on focused window |-->
-<!--| <kbd>Super</kbd> + <kbd>Backspace</kbd> | Launch logout menu |-->
-<!--| <kbd>Ctrl</kbd> + <kbd>Esc</kbd> | Toggle waybar |-->
-<!--| <kbd>Super</kbd> + <kbd>T</kbd> | Launch terminal emulator (kitty) |-->
-<!--| <kbd>Super</kbd> + <kbd>E</kbd> | Launch file manager (dolphin) |-->
-<!--| <kbd>Super</kbd> + <kbd>C</kbd> | Launch text editor (vscode) |-->
-<!--| <kbd>Super</kbd> + <kbd>F</kbd> | Launch web browser (firefox) |-->
-<!--| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd> | Launch system monitor (htop/btop or fallback to top) |-->
-<!--| <kbd>Super</kbd> + <kbd>A</kbd> | Launch application launcher (rofi) |-->
-<!--| <kbd>Super</kbd> + <kbd>Tab</kbd> | Launch window switcher (rofi) |-->
-<!--| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> | Launch file explorer (rofi) |-->
-<!--| <kbd>F10</kbd> | Toggle audio mute |-->
-<!--| <kbd>F11</kbd> | Decrease volume |-->
-<!--| <kbd>F12</kbd> | Increase volume |-->
-<!--| <kbd>Super</kbd> + <kbd>P</kbd> | Partial screenshot capture |-->
-<!--| <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>P</kbd> | Partial screenshot capture (frozen screen) |-->
-<!--| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>P</kbd> | Monitor screenshot capture |-->
-<!--| <kbd>PrtScn</kbd> | All monitors screenshot capture |-->
-<!--| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>G</kbd> | Disable hypr effects for gamemode |-->
-<!--| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>→</kbd><kbd>←</kbd> | Cycle wallpaper |-->
-<!--| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>↑</kbd><kbd>↓</kbd> | Cycle waybar mode |-->
-<!--| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> | Launch wallbash mode select menu (rofi) |-->
-<!--| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd> | Launch theme select menu (rofi) |-->
-<!--| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd> | Launch style select menu (rofi) |-->
-<!--| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Launch wallpaper select menu (rofi) |-->
-<!--| <kbd>Super</kbd> + <kbd>V</kbd> | Launch clipboard (rofi) |-->
-<!--| <kbd>Super</kbd> + <kbd>K</kbd> | Switch keyboard layout |-->
-<!--| <kbd>Super</kbd> + <kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd> | Move window focus |-->
-<!--| <kbd>Alt</kbd> + <kbd>Tab</kbd> | Change window focus |-->
-<!--| <kbd>Super</kbd> + <kbd>[0-9]</kbd> | Switch workspaces |-->
-<!--| <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>←</kbd><kbd>→</kbd> | Switch workspaces to a relative workspace |-->
-<!--| <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>↓</kbd> | Move to the first empty workspace |-->
-<!--| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd> | Resize windows |-->
-<!--| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>[0-9]</kbd> | Move focused window to a relative workspace |-->
-<!--| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd> | Move focused window around the current workspace |-->
-<!--| <kbd>Super</kbd> + <kbd>MouseScroll</kbd> | Scroll through existing workspaces |-->
-<!--| <kbd>Super</kbd> + <kbd>LeftClick</kbd><br><kbd>Super</kbd> + <kbd>Z</kbd> | Move focused window |-->
-<!--| <kbd>Super</kbd> + <kbd>RightClick</kbd><br><kbd>Super</kbd> + <kbd>X</kbd> | Resize focused window |-->
-<!--| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd> | Move/Switch to special workspace (scratchpad) |-->
-<!--| <kbd>Super</kbd> + <kbd>S</kbd> | Toggle to special workspace |-->
-<!--| <kbd>Super</kbd> + <kbd>J</kbd> | Toggle focused window split |-->
-<!--| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>[0-9]</kbd> | Move focused window to a workspace silently |-->
-<!---->
-<!--</div>-->
-<!---->
-<!--<div align="right">-->
-<!--  <br>-->
-<!--  <a href="#-design-by-t2"><kbd> <br> 🡅 <br> </kbd></a>-->
-<!--</div>-->
-<!---->
-<!---->
