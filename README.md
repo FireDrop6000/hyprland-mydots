@@ -18,7 +18,7 @@ To install, execute the following commands:
 pacman -Sy git
 git clone https://github.com/FireDrop6000/hyprland-mydots.git ~/mydots
 cd ~/mydots
-cp . ~/.config
+cp . ~
 ```
 
 ### Updating
@@ -28,7 +28,7 @@ To update the dotfiles, you will need to pull the latest changes from GitHub and
 ```shell
 cd ~/mydots
 git pull
-cp . ~/.config
+cp . ~
 ```
 
 <!--README Under Construction-->
