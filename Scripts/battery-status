@@ -6,7 +6,7 @@
 status="$(cat /sys/class/power_supply/BAT1/status)"
 level="$(cat /sys/class/power_supply/BAT1/capacity)"
 
-if [[ "$status" == "Discharging" ]]; then
+if [[ ("$status" == "Discharging") || ("$status" == "Full") ]]; then
   if [[ "$level" -eq "0" ]]; then
     printf " "
   elif [[ ("$level" -ge "0") && ("$level" -le "25") ]]; then
