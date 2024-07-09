@@ -83,7 +83,7 @@
       "bat": "BAT1",
       "interval": 60,
       "states": {
-        "critical": 15
+        "critical": 21
       },
       "format": "{icon}",
       "format-icons": [" ", " ", " ", " ", " "],
