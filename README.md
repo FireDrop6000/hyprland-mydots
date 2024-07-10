@@ -4,6 +4,9 @@
 
 <br><div align="center"><img width="65%" src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/made-with-arch-text.png"/><br></div>
 
+## Overview
+<div align="center"><iframe width="720" height="450" src="https://www.youtube.com/embed/lp5mevHqZsk?si=sMNRFEo4CawMOjpx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
 ## Installation
 
 No specific installation script is available. You should be okay with a minimal [Arch Linux](https://wiki.archlinux.org/title/Arch_Linux) install, or **maybe** on some [Arch-based distros](https://wiki.archlinux.org/title/Arch-based_distributions). My Dotfiles are specifically designed to work on [Hyprland](https://wiki.hyprland.org) and you should use it for the full experience. Individual dotfiles, however, which do not have any relation with the [WM](https://wiki.archlinux.org/title/window_manager) or the [DM](https://wiki.archlinux.org/title/display_manager), can be individually applied for the corresponding packages.
