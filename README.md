@@ -5,7 +5,7 @@
 <br><div align="center"><img width="65%" src="https://raw.githubusercontent.com/FireDrop6000/hyprland-mydots/master/.config/assets/made-with-arch-text.png"/><br></div>
 
 ## Overview
-<div align="center"><iframe width="720" height="450" src="https://www.youtube.com/embed/lp5mevHqZsk?si=sMNRFEo4CawMOjpx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div align="center">[![YouTube](http://i.ytimg.com/vi/lp5mevHqZsk/hqdefault.jpg)](https://www.youtube.com/watch?v=lp5mevHqZsk)</div>
 
 ## Installation
 
@@ -129,5 +129,6 @@ My Firefox rice is [here](https://github.com/FireDrop6000/my-firefox-css) if any
 
 </div>
 
+### Credit
 Special thanks to everyone who helped me achieve this, especially my good college friend [ArneshRC](https://github.com/ArneshRC) for helping me out troubleshooting many, many things and also develop and refurbish some of the scripts. Also the [r/unixporn](https://www.reddit.com/r/unixporn) community and some Youtube rices are huge inspirations of mine. Check out [Eric Murphy](https://www.youtube.com/@EricMurphyxyz), I learnt a lot from him. If you like the work, just star it please, thats all I would ask from you. Stay happy people!
 </div>
