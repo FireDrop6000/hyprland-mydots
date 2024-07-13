@@ -77,6 +77,11 @@ cp . ~
 <li><a href="https://github.com/abba23/spotify-adblock">Spotify Adblock</a></li>
 <li><a href="https://th-ch.github.io/youtube-music">Youtube Music</a></li>
 <li><a href="https://starship.rs">Starship</a></li>
+<li><a href="https://github.com/akinomyoga/ble.sh">Ble.sh</a></li>
+<li><a href="https://github.com/eza-community/eza">Eza</a></li>
+<li><a href="https://github.com/ajeetdsouza/zoxide">Zoxide</a></li>
+<li><a href="https://github.com/junegunn/fzf">Fzf</a></li>
+<li><a href="https://github.com/gokcehan/lf">Lf</a></li>
 <li>Additional user-specific applications like File Manager and Chat App</li>
 </ul></div>
 
@@ -130,5 +135,5 @@ My Firefox rice is [here](https://github.com/FireDrop6000/my-firefox-css) if any
 </div>
 
 ### Credit
-Special thanks to everyone who helped me achieve this, especially my good college friend [ArneshRC](https://github.com/ArneshRC) for helping me out troubleshooting many, many things and also develop and refurbish some of the scripts. Also the [r/unixporn](https://www.reddit.com/r/unixporn) community and some Youtube rices are huge inspirations of mine. Check out [Eric Murphy](https://www.youtube.com/@EricMurphyxyz), I learnt a lot from him. If you like the work, just star it please, thats all I would ask from you. Stay happy people!
+Special thanks to everyone who helped me achieve this, especially to my girlfriend [Pakhi](https://github.com/OPakhi) for always motivating me and keeping me in a good mind and to my good college friend [ArneshRC](https://github.com/ArneshRC) for helping me out troubleshooting many, many things and also develop and refurbish some of the scripts. Also the [r/unixporn](https://www.reddit.com/r/unixporn) community and some Youtube rices are huge inspirations of mine. Check out [Eric Murphy](https://www.youtube.com/@EricMurphyxyz), I learnt a lot from him. If you like the work, just star it please, thats all I would ask from you. Stay happy people!
 </div>

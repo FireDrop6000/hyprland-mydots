@@ -5,26 +5,34 @@ export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
 
 # Battery percentage at which to notify
 WARNING_LEVEL=21
-BATTERY_DISCHARGING=$(acpi -b | grep -c "Discharging")
-BATTERY_LEVEL=$(acpi -b | grep -P -o '[0-9]+(?=%)')
 
 # Use two files to store whether we have shown a notification or not
-EMPTY_FILE=/tmp/batteryempty
-FULL_FILE=/tmp/batteryfull
+# EMPTY_FILE=/tmp/batteryempty
+# FULL_FILE=/tmp/batteryfull
 
-# Reset notifications if the computer is charging/discharging 
-if [ "$BATTERY_DISCHARGING" -eq 1 ] && [ -f $FULL_FILE ]; then
-  rm $FULL_FILE
-elif [ "$BATTERY_DISCHARGING" -eq 0 ] && [ -f $EMPTY_FILE ]; then
-  rm $EMPTY_FILE
-fi 
+emp_flag=0
+full_flag=0
 
-# If the battery is charging and is full 
-if [ "$BATTERY_LEVEL" -gt 95 ] && [ "$BATTERY_DISCHARGING" -eq 0 ] && [ ! -f $FULL_FILE ]; then
-  notify-send "Battery Charged" "Battery is fully charged." -i ~/.config/dunst/icons/battery-full.png -r 9991
-  touch $FULL_FILE
-# If the battery is low and is not charging
-elif [ "$BATTERY_LEVEL" -le "$WARNING_LEVEL" ] && [ "$BATTERY_DISCHARGING" -eq 1 ] && [ ! -f $EMPTY_FILE ]; then
-  notify-send "Low Battery" "${BATTERY_LEVEL}% of battery remaining." -u critical -i ~/.config/dunst/icons/battery-alert.png -r 9991
-  touch $EMPTY_FILE
-fi 
+inotifywait -e ACCESS -m /sys/class/power_supply/BAT1/capacity | while read; do
+  # check percentage and show notification
+
+  BATTERY_DISCHARGING=$(cat /sys/class/power_supply/BAT1/status)
+  BATTERY_LEVEL=$(cat /sys/class/power_supply/BAT1/capacity)
+
+  # Reset notifications if the computer is charging/discharging 
+  if [ "$BATTERY_DISCHARGING" == "Discharging" ] && [ $full_flag -eq 1 ]; then
+    full_flag=0
+  elif [ "$BATTERY_DISCHARGING" == "Charging" ] && [ $emp_flag -eq 1 ]; then
+    emp_flag=0
+  fi 
+
+  # If the battery is charging and is full 
+  if [ "$BATTERY_LEVEL" -gt 95 ] && [ "$BATTERY_DISCHARGING" == "Charging" ] && [ $full_flag -ne 1 ]; then
+    notify-send "Battery Charged" "Battery is fully charged." -i ~/.config/dunst/icons/battery-full.png -r 9991
+    full_flag=1
+  # If the battery is low and is not charging
+  elif [ "$BATTERY_LEVEL" -le "$WARNING_LEVEL" ] && [ "$BATTERY_DISCHARGING" == "Discharging" ] && [ $emp_flag -ne 1 ]; then
+    notify-send "Low Battery" "${BATTERY_LEVEL}% of battery remaining." -u critical -i ~/.config/dunst/icons/battery-alert.png -r 9991
+    emp_flag=1
+  fi
+done
