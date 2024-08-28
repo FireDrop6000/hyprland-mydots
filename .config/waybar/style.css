@@ -1,11 +1,11 @@
 * {
     font-family: SF Pro Display;
-    font-weight: 500;
-    font-size: 11;
+    font-size: 11.5;
 }
 
 window#waybar {
-  background-color: rgba(27, 27, 27, 0.25);
+  background-color: rgba(242, 243, 244, 0.45);
+  /*background-color: rgba(27, 27, 27, 0.4);*/
 }
 
 #custom-app-menu,
@@ -24,8 +24,10 @@ window#waybar {
 #custom-recording,
 #custom-do-not-disturb,
 #clock {
-  color: #f2f3f4;
+  /*color: #f2f3f4;*/
+  color: #1b1b1b;
   padding: 2px 0px 2px 0px;
+  font-weight: 500;
 }
 
 #custom-app-menu {
@@ -35,7 +37,7 @@ window#waybar {
 }
 
 #window {
-  padding: 1px 0px 3px 0px;
+  font-weight: bold;
   margin-left: 15px;
 }
 
@@ -93,12 +95,12 @@ window#waybar {
 
 #custom-recording {
   font-size: 12;
-  margin-left: 15px;
+  margin-right: 15px;
 }
 
 #custom-do-not-disturb {
-  margin-left: 15px;
-  padding: 3px 0px 1px 0px;
+  margin-left: 17px;
+  /*padding: 3px 0px 1px 0px;*/
 }
 
 #clock {

@@ -1,3 +1,4 @@
 #!/bin/bash
 [[ -z "$DBUS_SESSION_BUS_ADDRESS" ]] && eval $(dbus-launch --sh-syntax --exit-with-session)
-exec dbus-launch Hyprland && reset
+dbus-launch Hyprland
+killall -q polkit-gnome-authentication-agent-1 gnome-keyring-daemon playerctld mpd-mpris hyprpaper waybar nwg-dock-hyprland blueman-applet nm-applet wl-paste fusuma hyprlock battery-notify

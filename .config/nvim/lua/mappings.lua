@@ -14,5 +14,5 @@ map('n', '<leader>fm', function()
 end)
 
 map('t', '<C-w>w', '<cmd> wincmd k <CR>')
---map('t', '<C-w>w', '<C-\\><C-n><C-w>w')
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+
+map('v', '<leader>sc', ":Silicon<CR>")

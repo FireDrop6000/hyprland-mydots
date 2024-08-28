@@ -1,0 +1,41 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export EDITOR:nvim
+SETUVAR --export FZF_DEFAULT_OPTS:\x2d\x2dheight\x3d60\x25\x20\x2d\x2dcolor\x3dfg\x3a\x2d1\x2cfg\x2b\x3a\x23fafafa\x2cbg\x3a\x2d1\x2cbg\x2b\x3a\x231c1c1c\x20\x2d\x2dcolor\x3dhl\x3a\x2382aaff\x2chl\x2b\x3a\x2389ddff\x2cinfo\x3a\x23ffcb6b\x2cmarker\x3a\x23c3e88d\x20\x2d\x2dcolor\x3dprompt\x3a\x23f07178\x2cspinner\x3a\x23c792ea\x2cpointer\x3a\x23c792ea\x2cheader\x3a\x2389ddff\x20\x2d\x2dcolor\x3dborder\x3a\x234a4a4a\x2clabel\x3a\x23eeffff\x2cquery\x3a\x23eeffff\x20\x2d\x2dborder\x3d\x22rounded\x22\x20\x2d\x2dborder\x2dlabel\x3d\x22\x22\x20\x2d\x2dpreview\x2dwindow\x3d\x22border\x2drounded\x22\x20\x2d\x2dpadding\x3d\x221\x22\x20\x2d\x2dprompt\x3d\x22\x3e\x20\x22\x20\x2d\x2dmarker\x3d\x22\x3e\x22\x20\x2d\x2dpointer\x3d\x22\u25c6\x22\x20\x2d\x2dseparator\x3d\x22\u2500\x22\x20\x2d\x2dscrollbar\x3d\x22\u2502\x22
+SETUVAR --export TERMINAL:kitty
+SETUVAR --export VISUAL:nvim
+SETUVAR __fish_initialized:3400
+SETUVAR _fisher_budimanjojo_2F_tmux_2E_fish_files:\x7e/\x2econfig/fish/conf\x2ed/tmux\x2eextra\x2econf\x1e\x7e/\x2econfig/fish/conf\x2ed/tmux\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/tmux\x2eonly\x2econf\x1e\x7e/\x2econfig/fish/conf\x2ed/tmux_abbrs\x2efish
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ebudimanjojo/tmux\x2efish
+SETUVAR _fisher_upgraded_to_4_4:\x1d
+SETUVAR fish_color_autosuggestion:brblack
+SETUVAR fish_color_cancel:\x2dr
+SETUVAR fish_color_command:blue
+SETUVAR fish_color_comment:red
+SETUVAR fish_color_cwd:green
+SETUVAR fish_color_cwd_root:red
+SETUVAR fish_color_end:green
+SETUVAR fish_color_error:brred
+SETUVAR fish_color_escape:brcyan
+SETUVAR fish_color_history_current:\x2d\x2dbold
+SETUVAR fish_color_host:normal
+SETUVAR fish_color_host_remote:yellow
+SETUVAR fish_color_normal:normal
+SETUVAR fish_color_operator:brcyan
+SETUVAR fish_color_param:cyan
+SETUVAR fish_color_quote:yellow
+SETUVAR fish_color_redirection:cyan\x1e\x2d\x2dbold
+SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_status:red
+SETUVAR fish_color_user:brgreen
+SETUVAR fish_color_valid_path:\x2d\x2dunderline
+SETUVAR fish_greeting:
+SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_pager_color_completion:normal
+SETUVAR fish_pager_color_description:yellow\x1e\x2di
+SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
+SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR fish_user_paths:/home/pratik/go/bin\x1e/home/pratik/\x2econfig/Scripts\x1e/home/pratik/\x2elocal/bin

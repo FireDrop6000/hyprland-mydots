@@ -18,12 +18,11 @@ eval "$(fzf --bash)"
 
 export PATH="/home/pratik/.local/bin:~/.config/Scripts:$PATH"
 
-# alias vim=nvim
-# alias hyprland="Hyprland && reset"
 alias ls="eza --icons --no-quotes"
-# pokeget random --hide-name
 alias cd="z"
 alias gpt="tgpt --model opengpts"
+alias pls="doas"
+alias open="imv"
 
 export TERMINAL="kitty"
 export EDITOR="nvim"

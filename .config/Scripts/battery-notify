@@ -1,14 +1,9 @@
 #!/bin/sh
 
 export DISPLAY=:1
-export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
 
 # Battery percentage at which to notify
 WARNING_LEVEL=21
-
-# Use two files to store whether we have shown a notification or not
-# EMPTY_FILE=/tmp/batteryempty
-# FULL_FILE=/tmp/batteryfull
 
 emp_flag=0
 full_flag=0
@@ -33,6 +28,7 @@ inotifywait -e ACCESS -m /sys/class/power_supply/BAT1/capacity | while read; do
   # If the battery is low and is not charging
   elif [ "$BATTERY_LEVEL" -le "$WARNING_LEVEL" ] && [ "$BATTERY_DISCHARGING" == "Discharging" ] && [ $emp_flag -ne 1 ]; then
     notify-send "Low Battery" "${BATTERY_LEVEL}% of battery remaining." -u critical -i ~/.config/dunst/icons/battery-alert.png -r 9991
-    emp_flag=1
+    # emp_flag=1
   fi
+  sleep 0.5
 done

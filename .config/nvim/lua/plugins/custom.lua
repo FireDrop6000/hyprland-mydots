@@ -2,7 +2,6 @@ local plugins = {
 
   { "elkowar/yuck.vim", lazy = true }, -- load a plugin at startup
 
-  -- You can use any plugin specification from lazy.nvim
   {
     "Pocco81/TrueZen.nvim",
     cmd = { "TZAtaraxis", "TZMinimalist" },
@@ -11,7 +10,6 @@ local plugins = {
     end,
   },
 
-  -- this opts will extend the default opts
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
@@ -21,26 +19,30 @@ local plugins = {
 
   {
     "folke/which-key.nvim",
-    enabled = false,
+    enabled = true,
   },
 
-  -- lazy.nvim
   {
     "folke/noice.nvim",
     event = "VeryLazy",
-    opts = {
-      -- add any options here
-    },
+
+    config = function()
+      require("noice").setup {
+        lsp = {
+          signature = {
+            enabled = false,
+          },
+        },
+      }
+    end,
+
+    opts = {},
     dependencies = {
-      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
       "MunifTanjim/nui.nvim",
-      -- OPTIONAL:
-      --   `nvim-notify` is only needed, if you want to use the notification view.
-      --   If not available, we use `mini` as the fallback
       -- "rcarriga/nvim-notify",
     },
   },
-
+  --
   {
     "nvim-java/nvim-java",
     dependencies = {
@@ -79,22 +81,50 @@ local plugins = {
       require("nvterm").setup()
     end,
   },
-}
--- If your opts uses a function call, then make opts spec a function*
--- should return the modified default config as well
--- here we just call the default telescope config
--- and then assign a function to some of its options
--- {
---   "nvim-telescope/telescope.nvim",
---   opts = function()
---     -- local conf = require "plugins.configs.telescope"
---     conf.defaults.mappings.i = {
---       ["<C-j>"] = require("telescope.actions").move_selection_next,
---       ["<Esc>"] = require("telescope.actions").close,
---     }
---
---     return conf
---   end,
--- },
 
+  {
+    "michaelrommel/nvim-silicon",
+    lazy = true,
+    cmd = "Silicon",
+    config = function()
+      require("nvim-silicon").setup {
+        font = "FiraCode Nerd Font=34;Noto Color Emoji=34",
+        theme = "Material-Darker",
+        background = "#FAFAFA",
+        window_title = function()
+          return vim.fn.fnamemodify(vim.api.nvim_buf_get_name(vim.api.nvim_get_current_buf()), ":t")
+        end,
+        to_clipboard = true,
+        output = "~/Pictures/Screenshots/code.png",
+        shadow_blur_radius = 20,
+        shadow_color = "#2A343980",
+        shadow_offset_x = 0,
+        shadow_offset_y = 0,
+        line_offset = function(args)
+          return args.line1
+        end,
+      }
+    end,
+  },
+
+  { "echasnovski/mini.icons", version = false },
+
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+    cmd = {
+      "TmuxNavigateLeft",
+      "TmuxNavigateDown",
+      "TmuxNavigateUp",
+      "TmuxNavigateRight",
+      "TmuxNavigatePrevious",
+    },
+    keys = {
+      { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+      { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+      { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+      { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+    },
+  },
+}
 return plugins

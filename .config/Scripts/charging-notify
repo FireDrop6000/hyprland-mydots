@@ -9,7 +9,7 @@
 
 export XAUTHORITY=~/.Xauthority
 export DISPLAY=:1
-export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
+# export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
 
 BATTERY_CHARGING=$1
 BATTERY_LEVEL=$(acpi -b | grep "Battery 0" | grep -P -o '[0-9]+(?=%)')

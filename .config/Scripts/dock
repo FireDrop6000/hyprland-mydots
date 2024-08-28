@@ -1,0 +1,3 @@
+#!/bin/bash
+killall nwg-dock-hyprland
+nwg-dock-hyprland -d -hd 100 -x -i 95

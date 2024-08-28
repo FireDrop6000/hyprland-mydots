@@ -451,24 +451,24 @@
     #default_icon = /path/to/icon
 
 [urgency_low]
-    background = "#a2a8bbb8"
+    background = "#f2f3f478"
     foreground = "#111111"
     frame_color = ""
     icon = ""
     timeout = 5
 
 [urgency_normal]
-    background = "#a2a8bbb8"
+    background = "#f2f3f478"
     foreground = "#111111"
     frame_color = ""
     icon = ""
     timeout = 5
-
-[redirect]
-    summary = "*"
-    script = "notif"
-
-[logger]
-    summary = "*"
-    script = "notif"
+#
+# [redirect]
+#     summary = "*"
+#     script = "notif"
+#
+# [logger]
+#     summary = "*"
+#     script = "notif"
 
